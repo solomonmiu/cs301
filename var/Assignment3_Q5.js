@@ -1,35 +1,39 @@
 let prompt =require ('prompt-sync')();
+
+
+let number_overdue= parseInt   (prompt ("please Enter number of overdue books last year"));
 let status= prompt("plaese Enter your patron status");
-let number_overdue= prompt ("please Enter number of overdue books last year");
-let loan_duration;
-if(number_overdue =0){
-    if(status="student"){
-        console.log(loan_duration= 6 +"weeks");
-    }else if(status="faculty"){
-        console.log(loan_duration=16 +"weeks");
+
+if(status=="student"){
+    if(number_overdue===0){
+    
+        console.log(6 +"weeks");
+    }else if(number_overdue <= 3){
+        console.log(4+"weeks");
 
     }else{
-        console.log(loan_duration= 4 +"weeks")
+        console.log(loan_duration=2 +"weeks")
     }
-}   
-else if(number_overdue < 3){
-    if(status="student"){
-        console.log(loan_duration=4+"weeks");
-     } else if(status="faculty"){
-       console.log(loan_duration=12 +"weeks");
+} 
+else if(status=="faculty"){  
+
+    if(number_overdue===0){
+        console.log(16+"weeks");
+    }else if(number_overdue <= 3){
+       console.log(12 +"weeks");
 
      }else{
-    console.log(loan_duration=3 +"weeks");
+    console.log(8 +"weeks");
      }
 }
 else{
-    if(status="student"){
-    console.log(loan_duration= 2+"weeks");
+    if(number_overdue===0){
+    console.log( 4+"weeks");
 
-    }else if(status="faculty"){
-        console.log(loan_duration = 4 +"weeks");
+    }else if(number_overdue <= 3){
+        console.log(3+"weeks");
     }else{
-        console.log(loan_duration = 2 +"weeks");
+        console.log(2 +"weeks");
     }
 
 }
