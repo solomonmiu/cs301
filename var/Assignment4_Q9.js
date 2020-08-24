@@ -1,11 +1,6 @@
-let n=5, a = 2*n,b = 3*n
-    for(let i= 1;i<=n;i++){
-        console.log(i);
-    }
-    for(let j= 1;j<=2*n;j++){
-        console.log(2*i);
-    }
+let prompt= require("prompt-sync")();
+let n=parseFloat(prompt('plaese enter your number'));
+for(leti=1;i<=n;i++){
+    console.log(i+ "\t"+i*2+"\t"+i*3+"\t"+i*i+"\t"+i*i*i);
+}
 
-    for(let k= 1;k<=3*n;k++){
-        console.log(3*i);
-    }

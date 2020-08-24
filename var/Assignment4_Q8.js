@@ -1,24 +1,26 @@
 
 let prompt =require ('prompt-sync')();
 
-let message =prompt ("I'm thinking of a number between 1 and 100.\n" +
+let guess =parseInt(prompt ("I'm thinking of a number between 1 and 100.\n" +
             "Try to guess it!\n" +
-            "Please enter an integer between 1 and 100.");
+            "Please enter an integer between 1 and 100."));
         let answer = 38;
-        let guess;
-        let count = 0;
-        do {
-            guess = parseInt(message);
+    
+        let count = 1;
+      while (guess != answer) {guess =parseInt(prompt ("I'm thinking of a number between 1 and 100.\n" +
+        "Try to guess it!\n" +
+        "Please enter an integer between 1 and 100."));count++;}{
+            
             if (guess < answer) {
-              console.log(  message = guess +
-                    " is too low. Please enter another integer.";)
+              console.log(   guess +
+                    " is too low. Please enter another integer.");
             
             }      
             else if (guess > answer) {
-              console.log  message = guess +
-                    " is too high. Please enter another integer.";
-                
-            }    count++
-        } while (guess != answer);
-        message = guess + " is correct!";
-       console.log (message + " after you have tried for  " + count + " times");
+              console.log  (guess +
+                    " is too high. Please enter another integer.");
+                    
+            }    
+        } 
+         guess + " is correct!";
+       console.log (guess + " after you have tried for  " + count + " times");
