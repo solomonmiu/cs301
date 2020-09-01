@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>assignment8</title>
+    <script>
+        function adressquestion(){
+            let name = document.getElementById("inputname").value;
+            let street = document.getElementById("inputstreet").value;
+            let city = document.getElementById("inputcity").value;
+            let state = document.getElementById("inputstate").value;
+            let Zipcode = document.getElementById("inputzipcode").value;
+            let fullAdress = name+"<br>"+street +"<br>"+city + ", "+state +" "+ Zipcode;
+            document.getElementById("outputdiv").innerHTML = fullAdress;
+           
+        }
+    </script>
+</head>
+<body>
+        <input id="inputname" type ="text" placeholder="enter name"><br>
+        <input id="inputstreet" type ="text" placeholder="enter street"> <br>
+        <input id="inputcity" type ="text" placeholder="enter city">
+        <input id="inputstate" type ="text" placeholder="enter state"> 
+        <input id="inputzipcode" type ="text" placeholder="enter zipcode"><br>
+
+        <button onclick="adressquestion()"> Make adress </button><br>
+        <div id ="outputdiv"></div>
+        
+
+</body>
+</html>
